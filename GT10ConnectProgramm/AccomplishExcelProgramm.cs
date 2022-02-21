@@ -63,16 +63,22 @@ namespace GT10ConnectProgramm
             {
                 Range rg1 = worksheet1.Range[worksheet1.Cells[k + 10, 3], worksheet1.Cells[k + 10, 5]]; // 발급문서명 영역
                 rg1.Merge(); // 영역 병합
+                rg1.HorizontalAlignment = 3;
                 Range rg2 = worksheet1.Range[worksheet1.Cells[k + 10, 6], worksheet1.Cells[k + 10, 7]]; // 수수료 영역
                 rg2.Merge();
+                rg2.HorizontalAlignment = 3;
                 Range rg3 = worksheet1.Range[worksheet1.Cells[k + 10, 9], worksheet1.Cells[k + 10, 10]]; // 발행소계 영역
                 rg3.Merge();
+                rg3.HorizontalAlignment = 3;
                 Range rg4 = worksheet1.Range[worksheet1.Cells[k + 10, 11], worksheet1.Cells[k + 10, 12]]; // 결손매수 영역
                 rg4.Merge();
+                rg4.HorizontalAlignment = 3;
                 Range rg5 = worksheet1.Range[worksheet1.Cells[k + 10, 13], worksheet1.Cells[k + 10, 14]]; // 결손소계 영역
                 rg5.Merge();
+                rg5.HorizontalAlignment = 3;
                 Range rg6 = worksheet1.Range[worksheet1.Cells[k + 10, 15], worksheet1.Cells[k + 10, 16]]; // 정산합계 영역
                 rg6.Merge();
+                rg6.HorizontalAlignment = 3;
                 worksheet1.Cells[k + 10, 2] = words[(k * 9) + 9 - 8]; // 번호
                 rg1.Value = words[(k * 9) + 9 - 7];
                 rg2.Value = words[(k * 9) + 9 - 6];
