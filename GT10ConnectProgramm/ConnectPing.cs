@@ -12,7 +12,7 @@
             string result;
             if (address.Contains("169.254") == true) // IP주소가 169.254일때만 체크
             {
-                if (output.Contains("만료") == true || output.Contains("전송하지 못했습니다.") == true || output.Contains("일반오류") == true) // 해당 문자열이 있을때 연결 실패
+                if (output.Contains("만료") == true || output.Contains("전송하지 못했습니다.") == true || output.Contains("일반 오류.") == true) // 해당 문자열이 있을때 연결 실패
                 {
                     result = "연결 실패";
                 }
