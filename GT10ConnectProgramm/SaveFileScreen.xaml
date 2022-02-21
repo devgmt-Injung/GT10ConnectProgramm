@@ -1,0 +1,142 @@
+﻿<Window x:Class="GT10ConnectProgramm.SaveFileScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GT10ConnectProgramm"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Title="파일 저장" Height="422" Width="342" WindowStyle="None" Closed="Window_Closed" MouseDown="Window_MouseDown"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="TriggerButtonOver">
+            <!-- Button Setters -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Triggers -->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="1"></Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Opacity" Value="0.5"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Name="DB메인페이지">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"></RowDefinition>
+            <RowDefinition Height="442*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Canvas>
+                <Line Stroke="Black" X1="0" X2="625" Y1="22" Y2="22" StrokeThickness="0.3"></Line>
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="0" HorizontalAlignment="Left">
+            <Image Source="피녹로고.png" Margin="10 0 0 0" Height="25"/>
+        </Grid>
+        <Grid Grid.Row="0" HorizontalAlignment="Right">
+            <Button Background="Transparent" BorderBrush="Transparent" Height="20" Margin="0 -1 3 0" Style="{StaticResource TriggerButtonOver}" Click="Exit_Window">
+                <Image Source="종료버튼.png" Opacity="1" ></Image>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TabControl BorderBrush="Transparent" Name="저장창">
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Grid Name="Panel">
+                                        <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Panel" Property="Background" Value="LightSkyBlue" />
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Panel" Property="Background" Value="White" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.Resources>
+                <TabItem Header="다른경로로 저장" FontFamily="./#welcome">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                            <ColumnDefinition Width="137*"></ColumnDefinition>
+                            <ColumnDefinition Width="13*"></ColumnDefinition>
+                            <ColumnDefinition Width="170*"></ColumnDefinition>
+                            <ColumnDefinition Width="9*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="14*"></RowDefinition>
+                            <RowDefinition Height="325*"></RowDefinition>
+                            <RowDefinition Height="16*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1" Grid.Column="1" Margin="0,0,0,16" Grid.RowSpan="2" Name="test">
+                            <GroupBox Header="인증기 선택"  FontFamily="./#welcome">
+                                <DataGrid Name="인증기목록" Margin="0 5 0 0" FontFamily="./#welcome" IsReadOnly="True" FontSize="9">
+                                    <DataGrid.Columns>
+                                        <DataGridTemplateColumn>
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button Click="ShowData">선택</Button>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </GroupBox>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="3" Margin="0,0,0,16" Grid.RowSpan="2">
+                            <GroupBox Header="데이터 목록" FontFamily="./#welcome" Margin="0 0 0 70">
+                                <DataGrid x:Name="데이터목록"  Margin="0 5 0 0" FontFamily="./#welcome" IsReadOnly="True" FontSize="9">
+                                    <DataGrid.Columns>
+                                        <DataGridTemplateColumn>
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox x:Name="check" HorizontalAlignment="Center" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                            <DataGridTemplateColumn.Header>
+                                                <CheckBox Checked="CheckBox_AllChecked" Unchecked="CheckBox_AllUnchecked"/>
+                                            </DataGridTemplateColumn.Header>
+                                        </DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </GroupBox>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="4" Margin="0,0,0,16" Grid.RowSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="230*"></RowDefinition>
+                                <RowDefinition Height="12*"></RowDefinition>
+                                <RowDefinition Height="83*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="3" Margin="31,279,-22,4" Grid.ColumnSpan="2"  >
+                            <Button BorderBrush="Transparent" Background="#91C46C" FontFamily="./#welcome" FontSize="18" Click="SaveAsData" Margin="-30,0,30,0">데이터 저장</Button>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>
