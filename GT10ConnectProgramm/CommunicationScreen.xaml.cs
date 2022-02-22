@@ -51,8 +51,18 @@ namespace GT10ConnectProgramm
             //IP통신상태 체크 기능
             if (information.Equals("인증기통신"))
             {
-                string path = @System.IO.Directory.GetCurrentDirectory() + "\\address.txt"; // address.txt(검사할 특정 IP들이 저장되어 있는 텍스트 파일)파일의 경로 저장
-                string[] ipaddress = System.IO.File.ReadAllLines(path); // address.txt 파일을 한줄씩 읽어와 배열로 저장. (10size의 배열)
+                string[] ipaddress = new string[10];
+                for(int i = 0; i < ipaddress.Length; i++)
+                {
+                    if(i != 9)
+                    {
+                        ipaddress[i] = "169.254.7." + (i + 1).ToString();
+                    }
+                    else
+                    {
+                        ipaddress[i] = "169.254.7." + (i + 2).ToString();
+                    }
+                }
                 for (int i = 0; i < 10; i++)
                 {
                     if (loadingThread.CancellationPending) // 취소 명령시 Thread_DoWork 종료
