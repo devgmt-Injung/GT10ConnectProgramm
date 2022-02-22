@@ -122,8 +122,6 @@ namespace GT10ConnectProgramm
                     serialPort.DataBits = (int)8;
                     serialPort.Parity = Parity.None;
                     serialPort.StopBits = StopBits.One;
-                    serialPort.ReadTimeout = (int)500;
-                    serialPort.WriteTimeout = (int)500;
                     serialPort.Encoding = System.Text.Encoding.GetEncoding(65001);
                     serialPort.Open(); // 포트 Open
                     serialPort.WriteLine("test"); // test 명령어 수행
@@ -156,8 +154,6 @@ namespace GT10ConnectProgramm
                         serialPort.DataBits = (int)8;
                         serialPort.Parity = Parity.None;
                         serialPort.StopBits = StopBits.One;
-                        serialPort.ReadTimeout = (int)500;
-                        serialPort.WriteTimeout = (int)500;
                         serialPort.Encoding = System.Text.Encoding.GetEncoding(65001);
                         serialPort.Open();
                         serialPort.WriteLine("test");
