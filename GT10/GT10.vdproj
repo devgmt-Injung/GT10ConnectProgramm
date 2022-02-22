@@ -15,26 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4D2BA9CB6A93FCA78255D36AEAEF25FF"
-        "OwnerKey" = "8:_E20C77A800A14BFFBD1101F5CC583337"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D314E67A60114D3C0FC39761E4408E6A"
-        "OwnerKey" = "8:_E20C77A800A14BFFBD1101F5CC583337"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E20C77A800A14BFFBD1101F5CC583337"
+        "MsmKey" = "8:_222793A0386F485FB2545D11C046F848"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_40271202F5F965C889F60E4311CAF368"
+        "OwnerKey" = "8:_222793A0386F485FB2545D11C046F848"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B1218C4D4D6453DB3AF60026CB1BFBC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A68FFCFC7A21178613135AAFDE96BDA7"
+        "OwnerKey" = "8:_222793A0386F485FB2545D11C046F848"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_EBEB851D5D1379F82BF700678C22309D"
-        "OwnerKey" = "8:_E20C77A800A14BFFBD1101F5CC583337"
+        "OwnerKey" = "8:_222793A0386F485FB2545D11C046F848"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,19 +52,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E20C77A800A14BFFBD1101F5CC583337"
+        "OwnerKey" = "8:_222793A0386F485FB2545D11C046F848"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D2BA9CB6A93FCA78255D36AEAEF25FF"
+        "OwnerKey" = "8:_40271202F5F965C889F60E4311CAF368"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D314E67A60114D3C0FC39761E4408E6A"
+        "OwnerKey" = "8:_A68FFCFC7A21178613135AAFDE96BDA7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -79,6 +85,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -95,6 +117,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -124,14 +154,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4D2BA9CB6A93FCA78255D36AEAEF25FF"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40271202F5F965C889F60E4311CAF368"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4D2BA9CB6A93FCA78255D36AEAEF25FF"
+                    "_40271202F5F965C889F60E4311CAF368"
                     {
                     "Name" = "8:WpfAnimatedGif.dll"
                     "Attributes" = "3:512"
@@ -155,14 +185,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D314E67A60114D3C0FC39761E4408E6A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B1218C4D4D6453DB3AF60026CB1BFBC"
+            {
+            "SourcePath" = "8:..\\GT10ConnectProgramm\\Excel_Test.xls"
+            "TargetName" = "8:Excel_Test.xls"
+            "Tag" = "8:"
+            "Folder" = "8:_5C3C8C20D54E486DAC774827FBC182E0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A68FFCFC7A21178613135AAFDE96BDA7"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D314E67A60114D3C0FC39761E4408E6A"
+                    "_A68FFCFC7A21178613135AAFDE96BDA7"
                     {
                     "Name" = "8:Renci.SshNet.dll"
                     "Attributes" = "3:512"
@@ -274,7 +324,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GT10"
         "ProductCode" = "8:{8E9B96F7-258F-4129-AD2E-1964DFD3402A}"
-        "PackageCode" = "8:{EEBAABAB-499F-466D-80B1-113A84509537}"
+        "PackageCode" = "8:{20F508D8-DFE8-4582-B51B-3454209839FD}"
         "UpgradeCode" = "8:{58EE9DD2-4A4A-4B81-B0B7-2D0590897420}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -394,7 +444,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7CFD5DE4F95F44CDBDBAA37AA0FECCFE"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CD87585BC6FB484A8CE9AF3D1CFF49E7"
             {
             "Name" = "8:Shortcut to 기본 출력 from GT10ConnectProgramm (Active)"
             "Arguments" = "8:"
@@ -402,7 +452,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E20C77A800A14BFFBD1101F5CC583337"
+            "Target" = "8:_222793A0386F485FB2545D11C046F848"
             "Folder" = "8:_C59E3B3DD83846FA8650EB5CB80C0CD5"
             "WorkingFolder" = "8:_5C3C8C20D54E486DAC774827FBC182E0"
             "Icon" = "8:"
@@ -807,7 +857,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E20C77A800A14BFFBD1101F5CC583337"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_222793A0386F485FB2545D11C046F848"
             {
             "SourcePath" = "8:..\\GT10ConnectProgramm\\obj\\Debug\\GT10ConnectProgramm.exe"
             "TargetName" = "8:"
