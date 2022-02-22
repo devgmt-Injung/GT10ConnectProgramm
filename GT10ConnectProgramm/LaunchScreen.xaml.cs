@@ -381,6 +381,7 @@ namespace GT10ConnectProgramm
             메인창.IsEnabled = false; // MainWindow.xaml 비활성화
             메인창.Opacity = 0.5;
             CommunicationScreen communicationScreen = new CommunicationScreen();
+            communicationScreen.Topmost = true;
             communicationScreen.Show();
         }
 
@@ -390,6 +391,7 @@ namespace GT10ConnectProgramm
             메인창.IsEnabled = false;
             메인창.Opacity = 0.5;
             SaveFileScreen saveFileScreen = new SaveFileScreen();
+            saveFileScreen.Topmost = true;
             saveFileScreen.Show();
         }
 

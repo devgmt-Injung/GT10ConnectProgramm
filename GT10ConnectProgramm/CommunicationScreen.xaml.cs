@@ -286,6 +286,7 @@ namespace GT10ConnectProgramm
             lw = new LoadingScreen();
             lw.LoadingError += LoadingError;
             lw.LoadingCancel += LoadingCancel;
+            lw.Topmost = true;
             lw.Show();
             loadingThread.RunWorkerAsync();
         }

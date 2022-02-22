@@ -91,6 +91,7 @@ namespace GT10ConnectProgramm
             else
             {
                 lw.Close();
+                메인.Topmost = true;
                 메인.IsEnabled = true;
                 메인.Opacity = 1;
             }
