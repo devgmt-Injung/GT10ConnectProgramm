@@ -10,7 +10,7 @@ namespace GT10ConnectProgramm
         Worksheet worksheet1;  // 특정 Excel 파일의 Worksheet 불러오는 객체
         public AccomplishExcelProgramm()  // Excel_Test.xls 파일 실행하는 생성자(단, 화면을 띄우지 않음.)
         {
-            string filepath = System.IO.Directory.GetCurrentDirectory() + "\\Excel_Test.xls"; // 프로그램 설치 경로에 저장되어있는 Excel_Test.xls 파일의 경로를 저장
+            string filepath = System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\Excel_Test.xls"; // 프로그램 설치 경로에 저장되어있는 Excel_Test.xls 파일의 경로를 저장
             application = new Microsoft.Office.Interop.Excel.Application(); // Excel 프로세스 실행
             workbook = application.Workbooks.Open(Filename: @filepath);  // Excel_Test.xls 파일 실행
         }
