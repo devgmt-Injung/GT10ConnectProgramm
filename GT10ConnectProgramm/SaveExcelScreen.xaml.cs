@@ -107,7 +107,6 @@ namespace GT10ConnectProgramm
         public SaveExcelScreen()
         {
             InitializeComponent();
-            MessageBox.Show(System.IO.Directory.GetCurrentDirectory() + "\\Excel_Test.xls");
             initBW();
             InitLoadWindow();
             ExcelTable.Columns.Add("인증기", typeof(string));
