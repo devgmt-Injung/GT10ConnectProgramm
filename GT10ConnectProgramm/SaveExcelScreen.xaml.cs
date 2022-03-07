@@ -84,9 +84,28 @@ namespace GT10ConnectProgramm
             }
             else if (e.Error != null)
             {
-                MessageBox.Show("Error!", "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
                 lw.Close();
-                Environment.Exit(-1);
+                string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
+                string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
+                DirectoryInfo di = new DirectoryInfo(folderpath);
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+                FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
+                if(fileInfo.Exists == true)
+                {
+                    StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
+                    writer.WriteLine("\n"+ s + e.Error.ToString());
+                    writer.Close();
+                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Environment.Exit(-1);
+                }
+                else { 
+                    System.IO.File.WriteAllText(folderpath+"\\errorlog.txt",s+"\n"+e.Error.ToString(),  System.Text.Encoding.Default);
+                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Environment.Exit(-1);
+                }
             }
             else
             {
