@@ -52,9 +52,9 @@ namespace GT10ConnectProgramm
             if (information.Equals("인증기통신"))
             {
                 string[] ipaddress = new string[10];
-                for(int i = 0; i < ipaddress.Length; i++)
+                for (int i = 0; i < ipaddress.Length; i++)
                 {
-                    if(i != 9)
+                    if (i != 9)
                     {
                         ipaddress[i] = "169.254.7." + (i + 1).ToString();
                     }
@@ -308,27 +308,28 @@ namespace GT10ConnectProgramm
                 else if (e.Error != null)
                 {
                     lw.Close();
-                string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
-                string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
-                DirectoryInfo di = new DirectoryInfo(folderpath);
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-                FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
-                if(fileInfo.Exists == true)
-                {
-                    StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
-                    writer.WriteLine("\n"+ s + e.Error.ToString());
-                    writer.Close();
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
-                else { 
-                    System.IO.File.WriteAllText(folderpath+"\\errorlog.txt",s+"\n"+e.Error.ToString(),  System.Text.Encoding.Default);
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
+                    string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
+                    string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
+                    DirectoryInfo di = new DirectoryInfo(folderpath);
+                    if (di.Exists == false)
+                    {
+                        di.Create();
+                    }
+                    FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
+                    if (fileInfo.Exists == true)
+                    {
+                        StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
+                        writer.WriteLine("\n" + s + e.Error.ToString());
+                        writer.Close();
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
+                    }
+                    else
+                    {
+                        System.IO.File.WriteAllText(folderpath + "\\errorlog.txt", s + "\n" + e.Error.ToString(), System.Text.Encoding.Default);
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
+                    }
                 }
                 else
                 {
@@ -475,27 +476,28 @@ namespace GT10ConnectProgramm
                 else if (e.Error != null)
                 {
                     lw.Close();
-                string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
-                string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
-                DirectoryInfo di = new DirectoryInfo(folderpath);
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-                FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
-                if(fileInfo.Exists == true)
-                {
-                    StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
-                    writer.WriteLine("\n"+ s + e.Error.ToString());
-                    writer.Close();
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
-                else { 
-                    System.IO.File.WriteAllText(folderpath+"\\errorlog.txt",s+"\n"+e.Error.ToString(),  System.Text.Encoding.Default);
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
+                    string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
+                    string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
+                    DirectoryInfo di = new DirectoryInfo(folderpath);
+                    if (di.Exists == false)
+                    {
+                        di.Create();
+                    }
+                    FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
+                    if (fileInfo.Exists == true)
+                    {
+                        StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
+                        writer.WriteLine("\n" + s + e.Error.ToString());
+                        writer.Close();
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
+                    }
+                    else
+                    {
+                        System.IO.File.WriteAllText(folderpath + "\\errorlog.txt", s + "\n" + e.Error.ToString(), System.Text.Encoding.Default);
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
+                    }
                 }
                 else
                 {
@@ -562,59 +564,61 @@ namespace GT10ConnectProgramm
             //Thread_DoWork의 USB로 데이터 읽어 다운하는 기능 끝날시 수행
             else if (information.Equals("데이터다운"))
             {
-                else if (e.Error != null)
-            {
-                lw.Close();
-                string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
-                string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
-                DirectoryInfo di = new DirectoryInfo(folderpath);
-                if (di.Exists == false)
+                if (e.Error != null)
                 {
-                    di.Create();
-                }
-                FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
-                if(fileInfo.Exists == true)
-                {
-                    StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
-                    writer.WriteLine("\n"+ s + e.Error.ToString());
-                    writer.Close();
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
-                else { 
-                    System.IO.File.WriteAllText(folderpath+"\\errorlog.txt",s+"\n"+e.Error.ToString(),  System.Text.Encoding.Default);
-                    MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Environment.Exit(-1);
-                }
-            }
-                if(stopState_USB == 0) { 
-                연결창.IsEnabled = true;
-                연결창.Opacity = 1;
-                DataTable dataTable = new DataTable();
-                dataTable.Columns.Add("인증기정보", typeof(string));
-                dataTable.Columns.Add("USB포트", typeof(string));
-                for (int j = 0; j < 10; j++)
-                {
-                    if ((correctUSBstate[j] != null) && (correctUSBstate[j].Equals("존재하지않음.") == false))
+                    lw.Close();
+                    string s = DateTime.Now.ToString("yyyy-MM-dd-HH시mm분ss초");
+                    string folderpath = @System.IO.Directory.GetCurrentDirectory() + "\\ERROR";
+                    DirectoryInfo di = new DirectoryInfo(folderpath);
+                    if (di.Exists == false)
                     {
-                        dataTable.Rows.Add(new string[] { GT10_Name[j], correctUSBstate[j] });
+                        di.Create();
+                    }
+                    FileInfo fileInfo = new FileInfo(folderpath + "\\errorlog.txt");
+                    if (fileInfo.Exists == true)
+                    {
+                        StreamWriter writer = new StreamWriter(folderpath + "\\errorlog.txt", true, System.Text.Encoding.Default);
+                        writer.WriteLine("\n" + s + e.Error.ToString());
+                        writer.Close();
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
+                    }
+                    else
+                    {
+                        System.IO.File.WriteAllText(folderpath + "\\errorlog.txt", s + "\n" + e.Error.ToString(), System.Text.Encoding.Default);
+                        MessageBox.Show(e.Error.ToString(), "Loading Issue", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Environment.Exit(-1);
                     }
                 }
+                if (stopState_USB == 0)
+                {
+                    연결창.IsEnabled = true;
+                    연결창.Opacity = 1;
+                    DataTable dataTable = new DataTable();
+                    dataTable.Columns.Add("인증기정보", typeof(string));
+                    dataTable.Columns.Add("USB포트", typeof(string));
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if ((correctUSBstate[j] != null) && (correctUSBstate[j].Equals("존재하지않음.") == false))
+                        {
+                            dataTable.Rows.Add(new string[] { GT10_Name[j], correctUSBstate[j] });
+                        }
+                    }
                 ((LaunchScreen)System.Windows.Application.Current.MainWindow).인증기_USB통신.ItemsSource = dataTable.DefaultView; // LaunchScreen.xaml의 DataGrid 인증기_USB통신에 DataTable 정보 전달
                     DataTable dataTable2 = new DataTable();
-                dataTable2.Columns.Add("저장된 인증기", typeof(string));
-                DirectoryInfo directoryInfo = new DirectoryInfo(@System.IO.Directory.GetCurrentDirectory() + "\\DATAFOLDER");
-                DirectoryInfo[] searchfiles = directoryInfo.GetDirectories();
-                if (searchfiles != null)
-                {
-
-                    for (int d = 0; d < searchfiles.Length; d++)
+                    dataTable2.Columns.Add("저장된 인증기", typeof(string));
+                    DirectoryInfo directoryInfo = new DirectoryInfo(@System.IO.Directory.GetCurrentDirectory() + "\\DATAFOLDER");
+                    DirectoryInfo[] searchfiles = directoryInfo.GetDirectories();
+                    if (searchfiles != null)
                     {
-                        dataTable2.Rows.Add(new string[] { searchfiles[d].ToString() });
+
+                        for (int d = 0; d < searchfiles.Length; d++)
+                        {
+                            dataTable2.Rows.Add(new string[] { searchfiles[d].ToString() });
+                        }
                     }
-                }
                             ((LaunchScreen)System.Windows.Application.Current.MainWindow).저장된데이터.ItemsSource = dataTable2.DefaultView;
-                lw.Close();
+                    lw.Close();
                 }
                 else
                 {
@@ -626,6 +630,7 @@ namespace GT10ConnectProgramm
                     ((LaunchScreen)System.Windows.Application.Current.MainWindow).인증기_USB통신.ItemsSource = dataTable.DefaultView;
                 }
             }
+
         }
         // 체크박스 체크시마다 포트 및 IP할당
         void CheckBox1(object sender, RoutedEventArgs e)
